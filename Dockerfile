@@ -1,4 +1,4 @@
-#use Ubuntu as the base image
+# Use Ubuntu as the base image
 FROM ubuntu:22.04
 
 # Set environment variables
@@ -9,7 +9,7 @@ RUN apt update && apt install -y \
     git autoconf automake libtool pkg-config \
     libpng-dev libjpeg8-dev libtiff5-dev zlib1g-dev \
     libwebp-dev libopenjp2-7-dev libgif-dev \
-    libarchive-dev libcurl4-openssl-dev libcu-dev \
+    libarchive-dev libcurl4-openssl-dev libicu-dev \
     libpango1.0-dev libcairo2-dev libleptonica-dev \
     wget python3-pip vim && \
     apt clean
@@ -22,13 +22,15 @@ RUN git clone https://github.com/tesseract-ocr/tesseract.git && \
     make && make install && ldconfig && \
     make training && make training-install
 
-# clone tesstrain
+# Clone tesstrain
 RUN git clone https://github.com/tesseract-ocr/tesstrain.git /tesseract/tesstrain
 
-# set the working directory
+# Set the working directory
 WORKDIR /tesseract/tesstrain
 
-# install python requirements
+# Install Python requirements
 RUN pip3 install -r requirements.txt
 
+# Set entry point (optional)
+CMD ["bash"]
 
