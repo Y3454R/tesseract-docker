@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  tesseract_trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./local_share:/Docker_Share
+    tty: true
