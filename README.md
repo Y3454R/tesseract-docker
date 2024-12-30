@@ -6,3 +6,6 @@
   ```bash
   docker compose up
   ```
+  ```bash
+  docker exec -it {container_name} bash
+  ```
