@@ -31,6 +31,13 @@ WORKDIR /tesseract/tesstrain
 # Install Python requirements
 RUN pip3 install -r requirements.txt
 
+# Fetch language data
+RUN make tesseract-langdata
+
+# Download the required traineddata files from the tessdata_best repository
+RUN wget -P /usr/local/share/tessdata/ https://github.com/tesseract-ocr/tessdata_best/raw/main/ben.traineddata
+RUN wget -P /usr/local/share/tessdata/ https://github.com/tesseract-ocr/tessdata_best/raw/main/eng.traineddata
+
 # Set entry point (optional)
 CMD ["bash"]
 
