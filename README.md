@@ -1,3 +1,5 @@
+<details>
+    <summary>  step-by-step instructions for training Tesseract 5 in a Docker container </summary>
 # Training Tesseract 5 in Docker
 
 This guide provides step-by-step instructions for training Tesseract 5 in a Docker container. Docker allows you to create a reproducible environment for training Tesseract OCR models. By following the steps outlined below, you can set up a Docker container with Ubuntu, install Tesseract 5 and the necessary training tools, obtain training data, organize the data, and start the training process.
@@ -333,3 +335,5 @@ For detailed steps and additional information, please refer to the following res
 - [How to Run Ubuntu as a Docker Container](https://www.makeuseof.com/run-ubuntu-docker-container/)
 - [Compilation guide for various platforms | tessdoc](https://tesseract-ocr.github.io/tessdoc/Compiling.html)
 - [GitHub - tesseract-ocr/tesstrain: Train Tesseract LSTM with make](https://github.com/tesseract-ocr/tesstrain)
+
+</details>
