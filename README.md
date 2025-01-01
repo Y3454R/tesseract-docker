@@ -13,7 +13,7 @@ docker exec -it {container_name} bash
 
 
 <details>
-<summary>**step-by-step instructions for training Tesseract 5 in a Docker container** </summary>
+<summary> **step-by-step instructions for training Tesseract 5 in a Docker container** </summary>
 
 #### Training Tesseract 5 in Docker
 
