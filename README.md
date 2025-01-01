@@ -13,15 +13,15 @@ docker exec -it {container_name} bash
 
 
 <details>
-<summary> **step-by-step instructions for training Tesseract 5 in a Docker container** </summary>
+<summary>  step-by-step instructions for training Tesseract 5 in a Docker container </summary>
 
-#### Training Tesseract 5 in Docker
+## Training Tesseract 5 in Docker
 
 This guide provides step-by-step instructions for training Tesseract 5 in a Docker container. Docker allows you to create a reproducible environment for training Tesseract OCR models. By following the steps outlined below, you can set up a Docker container with Ubuntu, install Tesseract 5 and the necessary training tools, obtain training data, organize the data, and start the training process.
 
 <details>
 
-<summary>**Create Ubuntu container**</summary>
+<summary> Create Ubuntu container </summary>
 
 1. Open the terminal.
 
@@ -129,7 +129,7 @@ Replace `/host/machine/dir` with the directory path on your host machine that yo
 </details>
 
 <details>
-<summary>**Install Tesseract 5 in the container**</summary>
+<summary>Install Tesseract 5 in the container</summary>
 
 1. In the container's terminal, update the package sources and install Git:
 
@@ -216,7 +216,7 @@ make tesseract-langdata
 
 
 <details>
-<summary>**Get Training Data**</summary>
+<summary>Get Training Data</summary>
 
 To train a Tesseract OCR model, you need the following training data:
 
@@ -239,7 +239,7 @@ Move all the training data into the directory shared with the Docker container. 
 </details>
 
 <details>
-<summary>**Organize Training Data**</summary>
+<summary> Organize Training Data </summary>
 
 1. Copy the training data from the shared directory to the appropriate location:
 
@@ -263,7 +263,7 @@ Now your training data is organized and ready for training the new model.
 </details>
 
 <details>
-<summary>**Start training**</summary>
+<summary>Start training</summary>
 
 1. Navigate to the training directory:
 
@@ -359,7 +359,7 @@ The traineddata file will now be available in the shared directory on your host 
 </details>
 
 <details>
-<summary>**References**</summary>
+<summary>Reference</summary>
 
 For detailed steps and additional information, please refer to the following resources:
 
