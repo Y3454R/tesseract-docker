@@ -19,7 +19,9 @@ docker exec -it {container_name} bash
 
 This guide provides step-by-step instructions for training Tesseract 5 in a Docker container. Docker allows you to create a reproducible environment for training Tesseract OCR models. By following the steps outlined below, you can set up a Docker container with Ubuntu, install Tesseract 5 and the necessary training tools, obtain training data, organize the data, and start the training process.
 
-## Create Ubuntu container
+<details>
+
+<summary> ## Create Ubuntu container </summary>
 
 1. Open the terminal.
 
@@ -123,6 +125,8 @@ docker run -ti -v C:\training_data:/Docker_Share myubuntu /bin/bash
 ```
 
 Replace `/host/machine/dir` with the directory path on your host machine that you want to share with the container, `image_name` with the name of the new image created in the previous step, and `/bin/bash` to start the container with a terminal.
+
+</details>
 
 ## Install Tesseract 5 in the container
 
