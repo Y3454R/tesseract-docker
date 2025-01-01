@@ -1,3 +1,17 @@
+# Create a reproducible environment for training Tesseract
+
+```bash
+docker pull ubuntu:22.04
+```
+
+```bash
+docker compose up
+```
+```bash
+docker exec -it {container_name} bash
+```
+
+
 <details>
 <summary>  step-by-step instructions for training Tesseract 5 in a Docker container </summary>
 
