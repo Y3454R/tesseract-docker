@@ -21,7 +21,7 @@ This guide provides step-by-step instructions for training Tesseract 5 in a Dock
 
 <details>
 
-<summary> ## Create Ubuntu container </summary>
+<summary> Create Ubuntu container </summary>
 
 1. Open the terminal.
 
@@ -128,7 +128,8 @@ Replace `/host/machine/dir` with the directory path on your host machine that yo
 
 </details>
 
-## Install Tesseract 5 in the container
+<details>
+<summary>Install Tesseract 5 in the container</summary>
 
 1. In the container's terminal, update the package sources and install Git:
 
@@ -211,8 +212,11 @@ pip install -r requirements.txt
 ```shell
 make tesseract-langdata
 ```
+</details>
 
-## Get Training Data
+
+<details>
+<summary>Get Training Data</summary>
 
 To train a Tesseract OCR model, you need the following training data:
 
@@ -232,7 +236,10 @@ The `.box` files contain information about character positions in the image, imp
 
 Move all the training data into the directory shared with the Docker container. For example, if your shared directory on the host machine is `C:\training_data`, place all the `.gt.txt`, `.tif`, and `.box` files in that directory.
 
-## Organize Training Data
+</details>
+
+<details>
+<summary> Organize Training Data </summary>
 
 1. Copy the training data from the shared directory to the appropriate location:
 
@@ -253,8 +260,10 @@ mv /Docker_Share/*.traineddata /usr/local/share/tessdata/
 ```
 
 Now your training data is organized and ready for training the new model.
+</details>
 
-## Start training
+<details>
+<summary>Start training</summary>
 
 1. Navigate to the training directory:
 
@@ -346,6 +355,8 @@ cp /tesseract/tesstrain/data/[lang].[font]/[lang].[font].traineddata /Docker_Sha
 Replace `[lang].[font]` with the appropriate language and font information.
 
 The traineddata file will now be available in the shared directory on your host machine.
+
+</details>
 
 ## Reference
 
